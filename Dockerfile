@@ -10,7 +10,7 @@ RUN set -ex; \
     rm -rf /var/lib/apt/lists/*; \
     \
     mkdir -p /var/spool/cron/crontabs; \
-    echo '*/15 * * * * php -f /var/www/html/update.php --feeds' > /var/spool/cron/crontabs/www-data
+    echo '*/15 * * * * php /var/www/html/update.php --feeds' > /var/spool/cron/crontabs/www-data
 # testing cron
     #echo '*/1 * * * * echo "Hi" >> /var/log/cron.log 2>&1\n#' > /var/spool/cron/crontabs/www-data
 
